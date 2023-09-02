@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@sbb-esta/angular/typography.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -91,7 +92,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@sbb-esta/angular/core/testing/lean-polyfill"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -100,6 +102,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/@sbb-esta/angular/typography.css",
               "src/styles.scss"
             ],
             "scripts": []
