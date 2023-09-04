@@ -72,12 +72,13 @@ export class AppComponent {
             versions: instruction.versions.sort((a, b) => a.operatingPoint.localeCompare(b.operatingPoint) * sortMultiplier)
           }));
           sortedInstructions.sort((a, b) => {
-            const result = a.versions[0].operatingPoint.localeCompare(b.versions[0].operatingPoint) * sortMultiplier;
-            if (result != 0) {
-              return result;
+            for (let versionIndex = 0; versionIndex < Math.min(a.versions.length, b.versions.length); versionIndex++) {
+              const result = a.versions[versionIndex].operatingPoint.localeCompare(b.versions[versionIndex].operatingPoint) * sortMultiplier;
+              if (result != 0) {
+                return result;
+              }
             }
-            // note this should be a loop iterating until the first comparison is not 0
-            return (a.versions[1].operatingPoint?.localeCompare(b.versions[1]?.operatingPoint) ?? 0) * sortMultiplier;
+            return a.versions.length > b.versions.length ? 1 : -1;
           });
         }
 
