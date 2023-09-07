@@ -5,7 +5,7 @@
     }
 
     table {
-        tr:not(:hover .header) td {
+        tr:not(:hover, .header) td {
             border-bottom: none;
         }
 
