@@ -33,5 +33,5 @@
     <td sbb-cell *sbbCellDef="let instruction" colspan="3"><strong>{{instruction.label}}</strong></td>
   </ng-container>
 
-  <tr sbb-row *sbbRowDef="let instruction; columns: ['instructionLabel']; when: isInstruction"></tr>
+  <tr sbb-row *sbbRowDef="let instruction; columns: ['instructionLabel']; when: isInstruction" class="header"></tr>
 </table>

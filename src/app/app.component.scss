@@ -3,4 +3,14 @@
         display: flex;
         flex-direction: column;
     }
+
+    table {
+        tr:not(:hover .header) td {
+            border-bottom: none;
+        }
+
+        tr td {
+            border-right: none;
+        }
+    }
 }
